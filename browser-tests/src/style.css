@@ -1,0 +1,44 @@
+body {
+    font-family: Mukta, sans-serif;
+ 
+}
+
+h1 {
+    color: #21aebf;
+    font-weight: 400;
+    font-family: Mukta, sans-serif;
+}
+
+h2 {
+    color: #6021bf;
+    font-weight: 400;
+    font-family: Mukta, sans-serif;
+}
+
+p {
+    font-weight: 400;
+    font-family: Mukta, sans-serif;
+    font-size: 1em;
+}
+.container-large {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.container {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid rgb(171 167 167 / 63%);
+    box-shadow: 6px 6px 4px rgb(151 146 146 / 61.9%);
+    border-radius: 7px;
+}
+
+
+li {
+    list-style-type: none;
+}
