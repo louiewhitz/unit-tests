@@ -1,5 +1,6 @@
 const assert = chai.assert;
 import { calcProductAndSum } from './consecutive.js';
+import { threeSumClosest } from './threeSumClosest.js';
 
 describe('calcProductAndSum', function () {
   it('should return [2, 3] for input 2', function () {
@@ -29,5 +30,19 @@ describe('calcProductAndSum', function () {
   });
 });
 
-describe('#testInReverse', function () {});
+describe('#threeSumClosest', function () {
+  it('should return 2 for input [-1, 2, 1, -4] and target 1', function () {
+    assert.equal(threeSumClosest([-1, 2, 1, -4], 1), 2);
+  });
+
+  it('should return 0 for input [0, 0, 0] and target 1', function () {
+    assert.equal(threeSumClosest([0, 0, 0], 1), 0);
+  });
+
+  it('should return 3 for input [1, 1, 1, 0] and target 100', function () {
+    assert.equal(threeSumClosest([1, 1, 1, 0], 100), 3);
+  });
+
+ 
+});
 mocha.run();
