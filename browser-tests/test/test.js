@@ -1,6 +1,7 @@
 const assert = chai.assert;
 import { calcProductAndSum } from './consecutive.js';
 import { threeSumClosest } from './threeSumClosest.js';
+import { arrayOfProducts } from './arrayOfProducts.js';
 
 describe('calcProductAndSum', function () {
   it('should return [2, 3] for input 2', function () {
@@ -42,7 +43,48 @@ describe('#threeSumClosest', function () {
   it('should return 3 for input [1, 1, 1, 0] and target 100', function () {
     assert.equal(threeSumClosest([1, 1, 1, 0], 100), 3);
   });
-
- 
 });
+
+describe('arrayOfProducts', function () {
+  it('should return the product of all the numbers in the array except the number at the index [5, 1, 2, 4] with output [8, 40, 10, 29]', function () {
+    assert.deepEqual(arrayOfProducts([5, 1, 4, 2]), [8, 40, 10, 20]);
+  } );
+
+  it('should return the product of all the numbers in the array except the number at the index [1, 8, 6, 2, 4]), [384, 48, 64, 192, 96]', function () {
+    assert.deepEqual(arrayOfProducts([1, 8, 6, 2, 4]), [384, 48, 64, 192, 96]);
+  });
+
+  it('should return the product of all the numbers in the array except the number at the index [-5, 2, -4, 14, -6] with output[672, -1680, 840, -240, 560]',
+      function () {
+    assert.deepEqual(
+      arrayOfProducts([-5, 2, -4, 14, -6]),
+      [672, -1680, 840, -240, 560]
+    );
+  });
+
+  it('should return the product of all the numbers in the array except the number at the index [5, 1, 2, 4] with output [8, 40, 10, 29]', function () {
+    assert.deepEqual(arrayOfProducts([5, 1, 4, 2]), [8, 40, 10, 20]);
+  });
+  it('should return the product of all the numbers in the array except the number at the index [1, 8, 6, 2, 4]), [384, 48, 64, 192, 96]', function () {
+    assert.deepEqual(arrayOfProducts([1, 8, 6, 2, 4]), [384, 48, 64, 192, 96]);
+  } );
+  it('should return the product [4, 4] with output [4, 4]', function () { 
+    assert.deepEqual(arrayOfProducts([4, 4]), [4, 4]);
+  });
+  it('should return the product [0, 0, 0, 0] with output [0, 0, 0, 0]', function () {   
+    assert.deepEqual(arrayOfProducts([0, 0, 0, 0]), [0, 0, 0, 0]);
+  } );
+  it('should return the product [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] with output [3628800, 1814400, 1209600, 907200, 725760, 604800, 518400, 453600, 403200, 362880]', function () { 
+    assert.deepEqual(
+      arrayOfProducts([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
+      [3628800, 1814400, 1209600, 907200, 725760, 604800, 518400, 453600, 403200, 362880]
+    );
+  } );
+  it('should return the product [0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9] with output [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] ', function () {
+    assert.deepEqual(
+      arrayOfProducts([0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    );
+  } );
+ });
 mocha.run();
