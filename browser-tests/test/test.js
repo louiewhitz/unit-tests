@@ -2,6 +2,7 @@ const assert = chai.assert;
 import { calcProductAndSum } from './consecutive.js';
 import { threeSumClosest } from './threeSumClosest.js';
 import { arrayOfProducts } from './arrayOfProducts.js';
+import { addTwo } from '../src/add-two.js';
 
 describe('calcProductAndSum', function () {
   it('should return [2, 3] for input 2', function () {
@@ -87,4 +88,15 @@ describe('arrayOfProducts', function () {
     );
   } );
  });
+
+ describe('addTwo', function () {
+  it('Given an array of integers, find two numbers such that they add up to a specific target number [2, 7, 11, 15], 0,1', function () { 
+    assert.deepEqual(addTwo([2, 7, 11, 15], 9), [0, 1]);
+  }); 
+});
+
+
+
+
+
 mocha.run();
